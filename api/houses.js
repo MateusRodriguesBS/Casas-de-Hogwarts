@@ -2,7 +2,7 @@ import fetch from 'node-fetch';
 
 export default async function handler(req, res) {
   try {
-    const response = await fetch('https://potterhead-api.vercel.app/api');
+    const response = await fetch('https://potterhead-api.vercel.app');
     const data = await response.json();
     res.status(200).json(data);
   } catch (err) {
