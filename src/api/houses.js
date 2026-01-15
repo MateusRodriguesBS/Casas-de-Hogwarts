@@ -1,4 +1,4 @@
-const BASE_URL = 'https://potterhead-api.vercel.app/api';
+const BASE_URL = '/api';
 
 export const getHouses = async () => {
   const res = await fetch(`${BASE_URL}/houses`);
@@ -7,7 +7,7 @@ export const getHouses = async () => {
 };
 
 export const getHouseById = async (houseId) => {
-  const res = await fetch(`${BASE_URL}/houses/${houseId}`);
+  const res = await fetch(`${BASE_URL}/house/${houseId}`);
   if (!res.ok) throw new Error(`Erro ao buscar detalhes da casa ${houseId}`);
   return await res.json();
 };

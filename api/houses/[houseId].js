@@ -1,8 +1,5 @@
-import fetch from 'node-fetch';
-
 export default async function handler(req, res) {
   const { houseId } = req.query;
-
   try {
     const response = await fetch(`https://potterhead-api.vercel.app/api/houses/${houseId}`);
     const data = await response.json();
