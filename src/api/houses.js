@@ -1,4 +1,4 @@
-const BASE_URL = '/api';
+const BASE_URL = 'https://potterhead-api.vercel.app/api';
 
 export const getHouses = async () => {
   const res = await fetch(`${BASE_URL}/houses`);
