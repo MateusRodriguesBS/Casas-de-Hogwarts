@@ -1,0 +1,34 @@
+{:tenant "teste"
+ :distribution-channel {:id #uuid "765be8a8-62f7-49e0-bb6d-64c03b7091d8"
+                        :cnpj "99175376597583"
+                        :legal-name "teste"
+                        :alias "teste"
+                        :address {:street "Rua Genebra"
+                                  :number "1000"
+                                  :neighborhood "Bela Vista"
+                                  :city "São Paulo"
+                                  :uf :SP
+                                  :cep "01316010"}
+                        :email "mateus.santos@180s.com.br"
+                        :phone {:number "85989577949"
+                                :area-code "85"
+                                :country-code "55"}
+                        :visibility :staging
+                        :api-config {:rate-limit 3}
+                        :backoffice-config {:features [:show-quotations
+                                                       :list-proposals]}}
+
+ :shared {:cancellation-config #:product-cancellation-config{:allow-reimbursement true
+                                                             :reimbursement-mode :product-reimbursement-mode/pro-rata
+                                                             :allow-reimbursement-info? true
+                                                             :reimbursement-info #:product-combo-sale-cancellation.reimbursement-info{:payment-method :payment.method/invoice}}
+
+          :payment-options [{:payment-type :payment.type/invoice
+                             :installments {:min-val 1
+                                            :max-val 12}}]
+
+          :channel-emails-config {:new-claim {:enabled? true
+                                              :recipient-emails ["mateus.santos@180s.com.br"]}}}
+
+ :products
+ []}
