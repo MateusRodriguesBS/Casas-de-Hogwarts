@@ -1,0 +1,34 @@
+{:tenant "welsyeteste778"
+ :distribution-channel {:id #uuid "5fc0c977-0131-46a0-8506-8ccdb0d30284"
+                        :cnpj "99175376597583"
+                        :legal-name "welsyeteste21"
+                        :alias "welsyeteste778"
+                        :address {:street "Rua Genebra"
+                                  :number "197"
+                                  :neighborhood "Bela Vista"
+                                  :city "São Paulo"
+                                  :uf :SP
+                                  :cep "60421010"}
+                        :email "mateus.santos@180s.com.br"
+                        :phone {:number "558589577"
+                                :area-code "85"
+                                :country-code "55"}
+                        :visibility :staging
+                        :api-config {:rate-limit 3}
+                        :backoffice-config {:features [:show-quotations
+                                                       :list-proposals]}}
+
+ :shared {:cancellation-config #:product-cancellation-config{:allow-reimbursement true
+                                                             :reimbursement-mode :product-reimbursement-mode/pro-rata
+                                                             :allow-reimbursement-info? true
+                                                             :reimbursement-info #:product-combo-sale-cancellation.reimbursement-info{:payment-method :payment.method/invoice}}
+
+          :payment-options [{:payment-type :payment.type/invoice
+                             :installments {:min-val 1
+                                            :max-val 12}}]
+
+          :channel-emails-config {:new-claim {:enabled? true
+                                              :recipient-emails ["mateus.santos@180s.com.br"]}}}
+
+ :products
+ []}
