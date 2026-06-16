@@ -1,0 +1,35 @@
+{:tenant "laribalera25"
+ :distribution-channel {:id #uuid "7ed11e62-cebc-4c22-a767-a9c66a285c9f"
+                        :cnpj "17890014284307"
+                        :legal-name "Laria Balera SA"
+                        :alias "lariabalera25"
+                        :address {:street "Rua Professor Teodorico"
+                                  :number "1000"
+                                  :neighborhood "Montese"
+                                  :city "Fortaleza"
+                                  :uf :CE
+                                  :cep "60421010"
+                                  :complement "sala"}
+                        :email "mateus.santos@gmail.com"
+                        :phone {:number "989577949"
+                                :area-code "85"
+                                :country-code "55"}
+                        :visibility :staging
+                        :api-config {:rate-limit 3}
+                        :backoffice-config {:features [:show-quotations
+                                                       :list-proposals]}}
+
+ :shared {:cancellation-config #:product-cancellation-config{:allow-reimbursement true
+                                                             :reimbursement-mode :product-reimbursement-mode/pro-rata
+                                                             :allow-reimbursement-info? true
+                                                             :reimbursement-info #:product-combo-sale-cancellation.reimbursement-info{:payment-method :payment.method/invoice}}
+
+          :payment-options [{:payment-type :payment.type/invoice
+                             :installments {:min-val 1
+                                            :max-val 12}}]
+
+          :channel-emails-config {:new-claim {:enabled? true
+                                              :recipient-emails ["mateus.santos@gmail.com"]}}}
+
+ :products
+ []}
